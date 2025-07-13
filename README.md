@@ -14,7 +14,7 @@ A modular React step sequencer for browser-based MIDI loopers, beatmakers, and s
 
 ## Screenshot
 
-<img src="./assets/screenshot.png" alt="Step Sequencer Screenshot" width="100%" />
+![Step Sequencer Screenshot](./assets/screenshot.png)
 
 ---
 
