@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# react-midi-sequencer
 
-## Getting Started
+A modular React step sequencer for browser-based MIDI loopers, beatmakers, and synth control interfaces.
 
-First, run the development server:
+## Features
+
+- Step-based sequencer grid with per-step toggles
+- MIDI output to external synths, VSTs, or DAWs via the Web MIDI API
+- Adjustable BPM and number of bars (1, 2, 4, 8, 16)
+- Per-track instrument configuration: channel, note (with name), velocity, note-off toggle
+- Loop toggle, metronome click, play/pause controls
+- MIDI output device selector with real-time status
+- Collapsible MIDI status panel
+
+## Screenshot
+
+<img src="./assets/screenshot.png" alt="Step Sequencer Screenshot" width="100%" />
+
+---
+
+## Installation
 
 ```bash
+npm install react-midi-sequencer
+
+
+⸻
+
+Usage
+
+import { StepSequencer } from 'react-midi-sequencer'
+
+function App() {
+  return <StepSequencer />
+}
+
+Components
+	•	StepGrid – Interactive sequencer grid
+	•	InstrumentEditor – Per-track instrument/channel/note control
+	•	useStepSequencer() – Hook for sequencer timing and state
+	•	useMidiOutput() – Hook for managing Web MIDI output
+
+Development
+
+git clone https://github.com/elysiantech/react-midi-sequencer
+cd react-midi-sequencer
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+MIT © Wiener M Mondesir
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
