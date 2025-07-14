@@ -4,6 +4,7 @@ import { useState, useCallback } from "react"
 import { useStepSequencer } from "@/hooks/useStepSequencer"
 import { SequencerGrid } from "@/components/SequencerGrid"
 import { InstrumentEditor } from "@/components/InstrumentEditor"
+import { Metronome } from "@/components/Metronome"
 import { useMidiOutput } from "@/hooks/useMidiOutput"
 
 export default function Page() {
@@ -11,9 +12,9 @@ export default function Page() {
   const [bars, setBars] = useState(4)
   const [isPlaying, setIsPlaying] = useState(false)
   const [loop, setLoop] = useState(true)
-  const [metronomeEnabled, setMetronomeEnabled] = useState(true)
+  const [metronomeEnabled, setMetronomeEnabled] = useState(false)
   const [showMidiStatus, setShowMidiStatus] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   const [instrumentMeta, setInstrumentMeta] = useState(() => 
     Array.from({ length: 8 }, (_, row) => ({
@@ -353,6 +354,9 @@ export default function Page() {
         onAddRow={addInstrumentRow}
         darkMode={darkMode}
       />
+
+      {/* Metronome Component */}
+      <Metronome bpm={bpm} isPlaying={metronomeEnabled} />
     </div>
   )
 }
