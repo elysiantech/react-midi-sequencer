@@ -1,4 +1,5 @@
 # react-midi-sequencer
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/elysiantech/react-midi-sequencer)
 
 A modular React step sequencer for browser-based MIDI loopers, beatmakers, and synth control interfaces.
 
@@ -49,5 +50,5 @@ npm run dev
 
 License
 
-MIT © Wiener M Mondesir
+MIT © Wiener Mondesir
 
